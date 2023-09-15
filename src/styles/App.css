@@ -1,0 +1,57 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html, body, #root, .App-component{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: inherit;
+    color: inherit;
+    display: block;
+}
+
+
+ol, ul{
+    margin: 0;
+    padding: 0;
+}
+
+.App-component{
+    background-color: var(--primary-bg-clr);
+    color: var(--primary-txt-clr);
+    display: flex;
+}
+
+header{
+    flex-basis: 15%;
+}
+
+.Page-component{
+    flex-basis: 85%;
+}
+
+@media(max-width: 520px){
+
+    .App-component{
+        flex-direction: column;
+    }
+    
+    header{
+        flex-basis: 5%;
+    }
+
+    .Page-component{
+        flex-basis: 95%;
+    }
+
+}

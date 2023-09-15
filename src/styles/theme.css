@@ -1,0 +1,32 @@
+
+
+
+
+#dark{
+    --primary-txt-clr: #FEFAE0;
+    --secondary-txt-clr: #000000;
+    --primary-bg-clr: #2b2d42;
+    --header-bg-clr: #0B080C;
+    --footer-bg-clr: #000000;
+    --link-hover-clr: #6b6b6b30;
+}
+
+#light{
+    --theme-clr: #FFFFFF;
+    --primary-txt-clr: #03001C;
+    --secondary-txt-clr: #000000;
+    --primary-bg-clr: #F1F0E8;
+    --secondary-bg-clr: #635985;
+    --header-bg-clr: #96B6C5;
+    --footer-bg-clr: #000000;
+    --link-hover-clr: #6b6b6b30;
+    --theme-hover-clr: #FFFFFF30;
+}
+
+#light-green{
+    --primary-txt-clr: #000000;
+    --secondary-txt-clr: #000000;
+    --primary-bg-clr: #000000;
+    --header-bg-clr: #000000;
+    --footer-bg-clr: #000000;
+}
