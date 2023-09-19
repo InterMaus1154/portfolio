@@ -42,14 +42,6 @@ const ThemeSelector : FC = () =>{
                     <span className="Theme-name">Dark</span>
                 </motion.div>
 
-                <motion.div 
-                whileHover={hoverStyle}
-                className="Theme-option"
-                onClick={()=>{setTheme("light-green")}}
-                >
-                    <span className="Theme-sample" style={{backgroundColor: "#95D5B2"}}></span>
-                    <span className="Theme-name">Light green</span>
-                </motion.div>
             </div>
         </span>
     );

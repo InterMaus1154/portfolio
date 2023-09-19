@@ -63,7 +63,7 @@ header nav a{
     display: block;
     width: 25px;
     height: 2px;
-    background-color: #EEEEEE;
+    background-color: var(--hamburger-clr);
 }
 
 @media(max-width: 520px){

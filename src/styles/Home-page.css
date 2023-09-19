@@ -1,0 +1,118 @@
+.Home-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.Hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: .25rem;
+    cursor: pointer;
+
+    --background-opacity: .9;
+    --background-size: cover;
+
+    position: relative;
+    isolation: isolate;
+}
+
+.Hero:hover{
+    --background-opacity: 1;
+}
+
+
+.Hero h2, h3{
+    margin: 0;
+}
+
+.Hero .Hero-title{
+    font-size: 3.5rem;
+    font-size: clamp(2rem, 2.5vw + 1.25rem, 4rem);
+    letter-spacing: 1rem;
+}
+
+.Hero .Hero-subtitle{
+    font-size: 1.25rem;
+    font-size: clamp(1.15rem, 1vw + .75rem, 1.75rem);
+    letter-spacing: .25rem;
+}
+
+.Hero .Hero-border{
+    position: absolute;
+    border: 3px solid transparent;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    transition: width .5s ease-in;
+}
+
+
+.Hero:hover .Hero-border{
+    border-color: var(--hero-border-clr);
+    width: 100%;
+}
+
+.Hero-top::after{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(	#CE2939, white, #477050);
+    background-size: var(--background-size);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: var(--background-opacity);
+    inset: 0;
+    z-index: -1;
+    transition: all .5s ease-in;
+    
+}
+
+
+.Hero-top{
+    color: var(--primary-txt-clr);
+}
+
+
+.Hero-middle{
+    color: var(--secondary-txt-clr);
+}
+
+.Hero-middle::after{
+    content: '';
+    position: absolute;
+    background-image: url("../images/hero-middle.jpg");
+    background-size: var(--background-size);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    opacity: var(--background-opacity);
+    inset: 0;
+    z-index: -1;
+    transition: all .5s ease-in;
+}
+
+
+.Hero-bottom{
+    color: var(--secondary-txt-clr);
+}
+
+.Hero-bottom::after{
+    content: '';
+    position: absolute;
+    background-image: 
+    linear-gradient(to top right, #27005D, #191825);
+    background-size: var(--background-size);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    opacity: var(--background-opacity);
+    inset: 0;
+    z-index: -1;
+    transition: all .5s ease-in;
+}
