@@ -3,9 +3,10 @@
 header{
     padding: .5rem;
     display: flex;
-    flex-direction: column;
-    background-color: var(--header-bg-clr);
-    color: var(--primary-txt-clr);
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #b33939;
+    color: #f7f1e3;
     gap: .85rem;
 }
 
@@ -20,17 +21,17 @@ header h1{
 
 header nav{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
 }
 
 header nav a{
     padding: .75rem 2rem;
-    color: var(--primary-txt-clr);
+    
 }
 
 .CV-button{
-    align-self: center;
+    padding-top: .5rem;
 }
 
 .CV-button a{
@@ -88,6 +89,7 @@ header nav a{
 
 .Nav-visible{
     display: flex;
+    flex-direction: column;
 }
 
 .Theme-selector{

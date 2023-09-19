@@ -27,11 +27,13 @@ const Header : FC = () =>{
                     <NavListItem to="/about">About</NavListItem>
                     <NavListItem to="/projects">Projects</NavListItem>
                     <NavListItem to="/contact">Contact</NavListItem>
-                    <ThemeSelector />
-                    <span className="CV-button"><Link to="/cv">CV</Link></span>
+                    <NavListItem to="/cv">CV</NavListItem>
+                    
             </nav>
         </header>
     );
 };
 
 export default Header;
+
+//<span className="CV-button"><Link to="/cv">CV</Link></span>

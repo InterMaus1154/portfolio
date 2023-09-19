@@ -12,14 +12,13 @@ const NavListItem : FC<INavListItem> = ({children, to}) =>{
 
     const initialStyle : any ={
         scale: 1,
-        textDecoration: "underline",
-        color: "var(--primary-txt-clr)"
+        textDecoration: "underline"
     };
 
     const hoverStyle : TargetAndTransition ={
         textDecoration: "none",
-        backgroundColor: "var(--link-hover-clr)",
-        paddingLeft: "2rem",
+        backgroundColor: "#d1ccc040",
+        paddingRight: "2rem",
         transition: {duration: .25}
     };
 
