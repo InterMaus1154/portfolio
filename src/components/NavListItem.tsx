@@ -1,6 +1,7 @@
 import {FC} from 'react';
 import {Link} from 'react-router-dom';
 import { motion, TargetAndTransition } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 
 interface INavListItem{
@@ -10,9 +11,10 @@ interface INavListItem{
 
 const NavListItem : FC<INavListItem> = ({children, to}) =>{
 
+    const navigate = useNavigate();
+
     const initialStyle : any ={
-        scale: 1,
-        textDecoration: "underline"
+        scale: 1
     };
 
     const hoverStyle : TargetAndTransition ={
@@ -32,8 +34,11 @@ const NavListItem : FC<INavListItem> = ({children, to}) =>{
             initial={initialStyle}
             whileHover={hoverStyle}
             whileTap={tapStyle}
+            title={children as string}
+            onClick={()=>{navigate(to)}}
+            onTap={()=>{navigate(to)}}
         >
-            <Link title={children as string} to={to}>{children}</Link>
+            <Link tabIndex={-1} to={to}>{children}</Link>
         </motion.span>
     );
 };

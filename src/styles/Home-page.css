@@ -4,46 +4,80 @@
     grid-template-rows: 1fr;
     place-items: center;
 
-    background-color: #d1ccc0;
+    
 }
 
 .Moving-box{
-    width: 350px;
-    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #0a2a01;
+
     padding: 4rem;
-    border: 1px solid #b33939;;
-    font-size: 2rem;
     position: relative;
+}
+
+.Moving-box .Box-content{
+    z-index: 2;
+    font-size: 2rem;
+    font-size: clamp(1.25rem, 1.75vw + 1.5rem, 2rem);
+    text-align: center;
+    width: min-content;
+    letter-spacing: 5px;;
+    color: #ff5252;
+}
+
+.Moving-box .Box-content h2{
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        typing 3.5s steps(20, end),
+        blink-cursor .75s step-end infinite;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blink-cursor{
+    from, to {border-color: transparent}
+    50%{border-color: orange;}
+}
+
+.Moving-box::before{
+    content: '';
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    border-width: 15px;
     border-radius: 50%;
+    border: clamp(5px, 1.5vw + 1rem, 30px) solid transparent; 
+    background: linear-gradient(45deg,#b33939,#ff793f) border-box; 
+    mask:
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; 
+    mask-composite: exclude;
+
     animation-name: spin;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+
+    z-index: 1;
 }
 
-.Moving-box .Box-content{
-    animation-name: counter-spin;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    text-align: center;
-}
-
-.Moving-box::before{
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: #b33939;;
-    border-radius: 100%;
-    position: absolute;
-    top: -5px;
-}
 
 @keyframes counter-spin{
     from{
@@ -56,12 +90,19 @@
 }
 
 @keyframes spin{
-    from{
+    0%{
         rotate: 0;
+        scale: 1;
     }
 
-    to{
+    50%{
+        rotate: 180deg;
+        scale: 1.2;
+    }
+
+    100%{
         rotate: 360deg;
+        scale: 1;
     }
 }
 
@@ -71,7 +112,7 @@
     border-right: 0px solid transparent;
     border-bottom: 20px solid transparent;
     border-top: 20px solid transparent;
-    scale: 5;
+    scale: 0;
     
     display: inline-block;
     cursor: pointer;

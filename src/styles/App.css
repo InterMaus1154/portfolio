@@ -6,6 +6,7 @@
 
 html, body, #root, .App-component{
     height: 100%;
+    background-color: #d1ccc0;
 }
 
 body{

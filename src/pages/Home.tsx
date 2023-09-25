@@ -14,12 +14,8 @@ const Home : FC = () =>{
         className="Page-component Home-section">
             <div className="Moving-box">
                 <div className="Box-content">
-                    <motion.div 
-                    whileTap={{scale: .90}}
-                    transition={{duration: .25}}
-                    onClick={()=>{navigate("/about")}}
-                    className="Triangle">
-                    </motion.div>
+                    <h2>Mark Kiss</h2>
+                    
                 </div>
             </div>
             
@@ -36,5 +32,16 @@ export default Home;
                 <h3 className="Hero-subtitle">Dolor sit amet, consectetur adipiscing elit</h3>
                 <div className="Hero-border "></div>
             </div>
+ * 
+ */
+
+/***
+ * <motion.div 
+                    whileTap={{scale: .90}}
+                    transition={{duration: .25}}
+                    onClick={()=>{navigate("/about")}}
+                    className="Triangle">
+                    </motion.div>
+ * 
  * 
  */

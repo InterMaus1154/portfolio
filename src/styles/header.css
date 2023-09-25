@@ -27,6 +27,7 @@ header nav{
 
 header nav a{
     padding: .75rem 2rem;
+    font-size: 1.5rem;
     
 }
 
@@ -58,13 +59,16 @@ header nav a{
     cursor: pointer;
 }
 
-
-
 .Hamburger-icon span{
     display: block;
     width: 25px;
     height: 2px;
     background-color: var(--hamburger-clr);
+}
+
+.Hamburger-icon:focus-visible{
+    outline: 2px solid red;
+    outline-offset: 5px;
 }
 
 @media(max-width: 520px){
@@ -85,6 +89,22 @@ header nav a{
     h1{
         justify-content: space-around;
     }
+
+    .Nav-visible{
+        width: 100%;
+    }
+
+}
+
+@media(min-width: 520px){
+    .Nav-visible{
+        flex-direction: row!important;
+    }
+}
+
+nav span:focus-visible{
+    outline: 3px solid red;
+    outline-offset: 5px;
 }
 
 .Nav-visible{
