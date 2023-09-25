@@ -16,12 +16,14 @@ header h1{
 
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     gap: .25rem;
 }
 
 header nav{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;;
     gap: 1.5rem;
 }
 
@@ -63,7 +65,7 @@ header nav a{
     display: block;
     width: 25px;
     height: 2px;
-    background-color: var(--hamburger-clr);
+    background-color: #f7f1e3;
 }
 
 .Hamburger-icon:focus-visible{
@@ -86,8 +88,9 @@ header nav a{
         display: flex;
     }
 
-    h1{
-        justify-content: space-around;
+    header h1{
+        justify-content: space-between;
+        flex-basis: 100%;
     }
 
     .Nav-visible{

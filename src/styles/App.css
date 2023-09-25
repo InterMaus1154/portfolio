@@ -31,8 +31,6 @@ ol, ul{
 }
 
 .App-component{
-    background-color: var(--primary-bg-clr);
-    color: var(--primary-txt-clr);
     display: flex;
     flex-direction: column;
 }

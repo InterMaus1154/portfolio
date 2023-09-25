@@ -1,57 +1,92 @@
 .Home-section{
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    place-items: center;
-
-    
+    grid-template-columns: 1fr 25px 1fr;
 }
 
-.Moving-box{
+
+.Home-element.Left{
+    grid-column: 1 / 2;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    padding: 1rem;
+}
+
+.Home-element.Left h1{
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #ff793f;
+    color: #ffffff;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 4rem;
-    position: relative;
+    border-radius: 10% 10% 25% 10%;
+    
 }
 
-.Moving-box .Box-content{
-    z-index: 2;
-    font-size: 2rem;
-    font-size: clamp(1.25rem, 1.75vw + 1.5rem, 2rem);
-    text-align: center;
-    width: min-content;
-    letter-spacing: 5px;;
-    color: #ff5252;
+.Color-barrier{
+    grid-column: 2 / 3;
+    background-image: linear-gradient(rgb(112, 68, 68), #b33939, #ff793f);
+    background-size: 400% 400%;
+    animation: bganim 5s linear infinite;
+    box-shadow: 12px 0px 15px -4px white, -12px 0 15px -4px white;
 }
 
-.Moving-box .Box-content h2{
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: nowrap;
-    margin: 0 auto;
-    animation:
-        typing 3.5s steps(20, end),
-        blink-cursor .75s step-end infinite;
-}
-
-@keyframes typing{
-    from{
-        width: 0;
+@keyframes bganim{
+    from, to{
+        background-position: 0 0;
     }
 
-    to{
-        width: 100%;
+    25%{
+        background-position: 50% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    75%{
+        background-position: 100% 100%;
+    }
+    
+}
+
+.Home-element.Right{
+    grid-column: 3 / -1;
+    
+}
+
+@media(max-width: 1000px){
+    .Home-section{
+        grid-template-rows: 1fr 25px 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .Home-element.Left{
+        grid-column: span 1;
+        grid-row: 1 / 2;
+    }
+
+    .Home-element.Right{
+        grid-column: span 1;
+        grid-row: 3 / -1;
+    }
+
+    .Color-barrier{
+        grid-column: span 1;
+        grid-row: 2 / 3;
     }
 }
 
-@keyframes blink-cursor{
-    from, to {border-color: transparent}
-    50%{border-color: orange;}
-}
 
-.Moving-box::before{
+
+/* .Moving-box::before{
     content: '';
     width: 350px;
     height: 350px;
@@ -76,10 +111,10 @@
     animation-iteration-count: infinite;
 
     z-index: 1;
-}
+} */
 
 
-@keyframes counter-spin{
+/* @keyframes counter-spin{
     from{
         rotate: 360deg;
     }
@@ -104,10 +139,10 @@
         rotate: 360deg;
         scale: 1;
     }
-}
+} */
 
 
-.Triangle{
+/* .Triangle{
     border-left: calc(2 * 20px * 0.866) solid #b33939;;
     border-right: 0px solid transparent;
     border-bottom: 20px solid transparent;
@@ -116,4 +151,4 @@
     
     display: inline-block;
     cursor: pointer;
-}
+} */

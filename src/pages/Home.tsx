@@ -12,12 +12,11 @@ const Home : FC = () =>{
     return(
         <motion.section
         className="Page-component Home-section">
-            <div className="Moving-box">
-                <div className="Box-content">
-                    <h2>Mark Kiss</h2>
-                    
-                </div>
+            <div className="Home-element Left">
+                <h1>Mark Kiss</h1>
             </div>
+            <div className="Color-barrier"></div>
+            <div className="Home-element Right"></div>
             
         </motion.section>
     );
