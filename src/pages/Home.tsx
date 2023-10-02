@@ -1,29 +1,33 @@
-import {FC, useEffect} from 'react';
+import {FC, useEffect, useState, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/Home-page.css";
-import {motion, useAnimate} from 'framer-motion';
+import {easeIn, motion, useAnimate} from 'framer-motion';
+import TiltedCard from '../components/TiltedCard';
+
+
+
 
 const Home : FC = () =>{
 
-    const navigate = useNavigate();
-
-    
-
     return(
-        <motion.section
+        <section 
         className="Page-component Home-section">
-            <div className="Home-element Left">
-                <h1>Mark Kiss</h1>
+            <div className="Home-element">
+                <div className="Section-title">
+                    
+                </div>
+                <div className="Text-box">
+                    <span><p>Lorem Ipsum</p></span>
+                    <span><p>Lorem Ipsum</p></span>
+                    <span><p>Lorem Ipsum</p></span>
+                </div>
             </div>
-            <div className="Color-barrier"></div>
-            <div className="Home-element Right"></div>
             
-        </motion.section>
+        </section>
     );
 };
 
 export default Home;
-
 
 /**
  * <div className="Hero Hero-bottom" onClick={()=>{navigate("/cv")}}>
