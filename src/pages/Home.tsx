@@ -14,12 +14,7 @@ const Home : FC = () =>{
         className="Page-component Home-section">
             <div className="Home-element">
                 <div className="Section-title">
-                    
-                </div>
-                <div className="Text-box">
-                    <span><p>Lorem Ipsum</p></span>
-                    <span><p>Lorem Ipsum</p></span>
-                    <span><p>Lorem Ipsum</p></span>
+                    Megy a hullám mint az állat vágod
                 </div>
             </div>
             

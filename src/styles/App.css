@@ -36,23 +36,22 @@ ol, ul{
     min-height: 100svh;
     position: relative;
     isolation: isolate;
+    overflow-x: hidden;
 }
 
 .App-component .bottom{
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.App-component .bottom svg{
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: max(10vw, 250px);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../images/wave.svg");
-    z-index: -1;
-    opacity: .5;
-
+    min-height: 200px;
+    overflow-x: hidden;
 }
-
 
 header{
     flex-basis: 5%;
@@ -78,11 +77,77 @@ header{
 
 }
 
-.spacer{
-    aspect-ratio: 1/1;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../images/wave.svg");
+.path-1{
+    animation: wave-1 5s infinite linear;
+    transform-origin: bottom;
+}
+
+@keyframes wave-1{
+    from{
+        transform: translateX(0) scale(1);
+    }
+
+    50%{
+        transform: translateX(5px) scale(1.125);
+    }
+    to{
+        transform: translateX(0) scale(1);
+    }
+}
+
+.path-2{
+    animation: wave-2 5s infinite linear;
+    transform-origin: left;
+}
+
+@keyframes wave-2{
+    from{
+        transform: scale(1) translateY(0); 
+    }
+
+    50%{
+        transform: scale(0.95) translateY(-5px);
+    }
+
+    to{
+        transform: scale(1) translateY(0); 
+    }
+}
+
+.path-3{
+    animation: wave-3 3s infinite linear;
+    transform-origin: right;
+}
+
+@keyframes wave-3{
+    from{
+        transform: scale(1) translateX(0); 
+    }
+
+    50%{
+        transform: translateX(-5px);
+    }
+
+    to{
+        transform: scale(1) translateX(0); 
+    }
+}
+
+.path-4{
+    animation: wave-4 5s infinite linear;
+    transform-origin: left;
+}
+
+@keyframes wave-4{
+    from{
+        transform: scale(1) translateX(0); 
+    }
+
+    50%{
+        transform: scale(0.75) translateX(-5px);
+    }
+
+    to{
+        transform: scale(1) translateX(0); 
+    }
 }
