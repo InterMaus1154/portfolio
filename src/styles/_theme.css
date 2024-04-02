@@ -1,0 +1,28 @@
+/*THEME SPECIFIC STYLE SETTINGS*/
+
+
+
+#light{
+    --body-bg-clr: #f8f8f8;
+    --prim-txt-clr: #212121;
+    --sec-txt-clr: #333333;
+    --hdg-clr: #99BC85;
+    --hdr-bg-clr: #f4f4f4;
+    --theme-icon-clr: #111827;
+    --theme-icon-hover-bg-clr: #111827;
+    --theme-icon-hover-clr: #fff;
+    --link-hover-bg-clr: #111827;
+    --link-hover-clr: #fff;
+}
+
+#dark{
+    --body-bg-clr: #121212;
+    --prim-txt-clr: #ffffff;
+    --sec-txt-clr: #ffffff;
+    --hdg-clr: #f4f4f4;
+    --theme-icon-clr: #fff;
+    --theme-icon-hover-bg-clr: #fff;
+    --theme-icon-hover-clr: #111827;
+    --link-hover-bg-clr: #fff;
+    --link-hover-clr: #111827;
+}
