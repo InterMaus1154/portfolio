@@ -3,6 +3,7 @@ import App from './App';
 import ThemeProvider from "./context/ThemeContext";
 import "./styles/_theme.css";
 import {BrowserRouter as Router} from "react-router-dom";
+import HeaderStatusProvider from "./context/HeaderStatusContext";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <Router>
         <ThemeProvider>
-            <App/>
+            <HeaderStatusProvider>
+                <App/>
+            </HeaderStatusProvider>
         </ThemeProvider>
     </Router>
 );

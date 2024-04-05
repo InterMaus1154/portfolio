@@ -1,12 +1,44 @@
 header{
-
     padding: 0 2.5rem;
-    border-bottom: 1px solid var(--prim-txt-clr);
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+
     row-gap: 1rem;
+
+    background-color: var(--header-bg-clr);
+    color: var(--header-clr);
+
+    width: 20vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    opacity: 0;
+
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+}
+
+@media(max-width: 768px){
+    header{
+        width: 100vw;
+        inset: 0;
+    }
+}
+
+.Close-header-button{
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.Header-active{
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
 header h1{
@@ -15,19 +47,11 @@ header h1{
     text-align: center;
 }
 
-header nav{
-    justify-self: start;
-}
-
-@media(min-width: 1000px){
-    header nav{
-        grid-column: span 2;
-    }
-}
 
 header nav ul{
     display: flex;
-    align-items: center;
+    text-align: center;
+    flex-direction: column;
 
     list-style-type: none;
     gap: 1rem;
@@ -38,101 +62,25 @@ header nav a{
     font-size: 1.25rem;
     border-radius: 4px;
 
-    background-image: linear-gradient(var(--link-hover-bg-clr), var(--link-hover-bg-clr));
+    background-image: linear-gradient(var(--button-bg-clr), var(--button-bg-clr));
     background-size: 0 100%;
     background-position: right;
     background-repeat: no-repeat;
     transition: background-size var(--nav-link-trans-speed), color .5s;
 
     --nav-link-trans-speed: .5s;
+
+
+    font-variant: small-caps;
 }
 
 header nav a:hover{
     background-size: 100% 100%;
-    color: var(--link-hover-clr);
+    color: var(--button-hover-clr);
     background-position: left;
-}
-
-.Theme-switcher{
-    justify-self: end;
-}
-
-header button{
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    width: 100px;
-    border-radius: 8px;
-}
-
-.Header--fa-icon{
-    font-size: 1.65rem;
-    padding: 1rem;
-    color: var(--theme-icon-clr);
-}
-
-.Theme-switcher button:hover{
-    background-color: var(--theme-icon-hover-bg-clr);
-}
-
-.Theme-switcher button:hover .Header--fa-icon{
-    color: var(--theme-icon-hover-clr);
 }
 
 a.Link-item--active{
     text-decoration: underline;
 }
 
-.Hamburger-menu{
-    display: none;
-}
-
-@media(max-width: 1000px){
-
-    header{
-        padding: 1rem;
-    }
-
-    header nav{
-        order: 4;
-        width: 100%;
-        display: none;
-    }
-
-    header nav ul{
-        flex-direction: column;
-        width: 100%;
-    }
-
-    header nav a, header nav li{
-        width: 100%;
-        --nav-link-trans-speed: 1s;
-    }
-
-    .Theme-switcher{
-        order: 3;
-        justify-self: start;
-        grid-column: span 6;
-    }
-
-    .Logo-section{
-        grid-column: span 12;
-        order: 1;
-    }
-
-    .Theme-switcher button{
-        width: 100%;
-        text-align: left;
-    }
-
-    .Hamburger-menu{
-        display: block;
-        grid-column: span 6;
-        order: 2;
-    }
-
-    .Nav--active{
-        display: block;
-    }
-}

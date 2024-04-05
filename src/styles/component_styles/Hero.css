@@ -1,0 +1,130 @@
+
+.Hero--section {
+    padding: 2.5rem;
+    line-height: 1.5;
+}
+
+.Hero--section h1 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.Hero--section h2 {
+    font-size: 5rem;
+}
+
+.Hero--section h2 span {
+    color: var(--fa-icon-clr);
+}
+
+@media (max-width: 768px) {
+    .Hero--section h2 {
+        font-size: 2.75em;
+    }
+
+    .Hero--section {
+        padding: 2rem;
+    }
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Highlighted-word {
+    position: relative;
+    isolation: isolate;
+}
+
+.Highlighted-word::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 0;
+    transition: width 1s ease-in-out;
+    background: transparent;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    z-index: -1;
+    isolation: isolate;
+
+    animation-name: highlight;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.Highlighted-word:nth-child(1)::before {
+    background-image: linear-gradient(
+            to right,
+            rgba(255, 225, 0, 0.1),
+            rgba(255, 225, 0, 0.7) 4%,
+            rgba(255, 225, 0, 0.3)
+    );
+
+    rotate: 3deg;
+    animation-delay: 1.2s;
+}
+
+.Highlighted-word:nth-child(2)::before {
+    background-image: linear-gradient(
+            to right,
+            rgba(255, 225, 0, 0.1),
+            rgba(255, 192, 203, 0.7) 4%,
+            rgba(255, 225, 0, 0.3)
+    );
+
+    rotate: -4deg;
+    animation-delay: 2.3s;
+}
+
+@keyframes highlight {
+    to {
+        width: 100%;
+    }
+}
+
+.Changing-word {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+
+    animation: typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+
+}
+
+.Hero-bottom{
+    animation: fade-up 1s linear forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.Hero-bottom .Buttons{
+    --hero-button-gap: 1rem;
+    display: flex;
+    gap: var(--hero-button-gap);
+
+}
+
+.Hero-bottom .Buttons .Action-button{
+    flex-basis: calc(50% - var(--hero-button-gap));
+}

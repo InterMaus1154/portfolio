@@ -7,7 +7,7 @@
 }
 
 *::after, *::before {
-    display: block;
+    display: inline-block;
 }
 
 img {
@@ -25,14 +25,91 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 700!important;
 }
 
+html, body, #root, .App{
+    height: 100%;
+}
+
+body{
+    --body-width: 1500px;
+
+    max-width: var(--body-width);
+    margin: 0 auto;
+
+    background-color: var(--body-bg-clr);
+}
+
+main{
+    padding: 2.5rem 0;
+}
+
 .App{
     min-height: 100vh;
     min-height: 100svh;
 
-    background-color: var(--body-bg-clr);
+
     color: var(--prim-txt-clr);
 }
 
-main{
-    padding: 2.5rem;
+.Page--component{
+    min-height: 65vh;
+    display: grid;
+    place-items: center;
+}
+
+.Section--title{
+    --section-title-size: 2rem;
+    font-size: var(--section-title-size);
+    border-bottom: 1px solid var(--sec-txt-clr);
+    padding-bottom: 1rem;
+}
+
+.Section--subtitle{
+    font-size: calc(var(--section-title-size) * .75);
+}
+
+@media(max-width: 1000px){
+    .Section--title{
+        text-align: center;
+    }
+}
+
+.Fa-icon{
+    font-size: 1.65rem;
+    padding: .5rem;
+    color: var(--fa-icon-clr);
+}
+
+.Fa-wrapper-button{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.Open-header-button{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.Fa-wrapper-button:hover{
+    background-color: var(--fa-icon-hover-bg-clr);
+}
+
+.Fa-wrapper-button:hover .Fa-icon{
+    color: var(--fa-icon-hover-clr);
+}
+
+.Action-button{
+    padding: .5rem 1rem;
+    letter-spacing: 2px;
+    /*display: inline-block;*/
+    border-radius: 8px;
+    color: #F2F1EB;
+    background-color: var(--sec-txt-clr);
+}
+
+.Action-button:hover{
+    background-color: #0D1B2A;
 }

@@ -1,28 +1,44 @@
 /*THEME SPECIFIC STYLE SETTINGS*/
 
 
+/*#light{*/
+/*    --body-bg-clr: #1F2544;*/
+/*    --prim-txt-clr: #474F7A;*/
+/*    --sec-txt-clr: #776B5D;*/
+/*    --hdg-clr: #99BC85;*/
+/*    --hdr-bg-clr: #f4f4f4;*/
+/*    --theme-icon-clr: #111827;*/
+/*    --theme-icon-hover-bg-clr: #111827;*/
+/*    --theme-icon-hover-clr: #fff;*/
+/*    --button-hover-clr: #F1F5A8;*/
+/*    --button-bg-clr: #B2B377;*/
+/*}*/
 
 #light{
-    --body-bg-clr: #f8f8f8;
-    --prim-txt-clr: #212121;
-    --sec-txt-clr: #333333;
-    --hdg-clr: #99BC85;
-    --hdr-bg-clr: #f4f4f4;
-    --theme-icon-clr: #111827;
-    --theme-icon-hover-bg-clr: #111827;
-    --theme-icon-hover-clr: #fff;
-    --link-hover-bg-clr: #111827;
-    --link-hover-clr: #fff;
+    --body-bg-clr: #A5DD9B;
+    --prim-txt-clr: #030637;
+    --sec-txt-clr: #030637;
+
+    --header-bg-clr: #E5E483;
+    --header-clr: #212121;
+
+    --button-hover-clr: #ffffff;
+    --button-bg-clr: #88AB8E;
+
+    --fa-icon-clr: #111827;
+    --fa-icon-hover-bg-clr: #111827;
+    --fa-icon-hover-clr: #F3FDE8;
 }
 
 #dark{
-    --body-bg-clr: #121212;
-    --prim-txt-clr: #ffffff;
-    --sec-txt-clr: #ffffff;
+    --body-bg-clr: #0D1B2A;
+    --prim-txt-clr: #388E3C;
+    --sec-txt-clr: #FFA726;
+    --button-bg-clr: #263238;
     --hdg-clr: #f4f4f4;
     --theme-icon-clr: #fff;
     --theme-icon-hover-bg-clr: #fff;
     --theme-icon-hover-clr: #111827;
     --link-hover-bg-clr: #fff;
-    --link-hover-clr: #111827;
+    --button-hover-clr: #fff;
 }
