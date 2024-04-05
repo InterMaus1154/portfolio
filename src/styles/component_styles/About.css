@@ -1,10 +1,11 @@
+@import "~@flaticon/flaticon-uicons/css/brands/all";
 
-.Introduction-box{
+.Introduction-box {
     margin-top: 3rem;
     line-height: 1.5;
 }
 
-.Introduction-box-body{
+.Introduction-box-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     align-items: center;
@@ -12,18 +13,56 @@
     gap: 1.5rem;
 }
 
-.Introduction-box figure{
-    max-width: 60%;
+.Introduction-box h2 {
+    text-align: center;
+}
+
+.Introduction-box figure {
+    max-width: 45%;
     min-width: 250px;
 }
 
-.Introduction-box figure img{
+.Introduction-box figure img {
     border-radius: 24px;
     width: 100%;
     border: 1px solid black;
 }
 
-.Introduction-box figure figcaption{
+.Introduction-box figure figcaption {
     text-align: center;
     font-style: italic;
 }
+
+.Introduction-box p {
+    font-size: 1.125rem;
+}
+
+.Skill-list {
+    list-style-type: none;
+    font-size: 3rem;
+    color: var(--prim-txt-clr);
+
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Skill-list li:hover{
+    color: var(--sec-txt-clr);
+}
+
+.Skill-list li.Has-svg{
+    width: 3rem;
+}
+
+.Skill-list li.Has-svg:hover svg{
+    color: var(--sec-txt-clr);
+}
+
+.Skill-list li.Has-svg svg{
+    color: var(--body-bg-clr);
+    fill: currentColor;
+}
+

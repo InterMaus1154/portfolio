@@ -8,7 +8,6 @@ interface IModalTemplate {
     fragment: React.ReactNode;
 }
 
-
 export const useModal = ({fragment}: IModalTemplate): any[] => {
 
     const modalRef = useRef<HTMLDivElement>(document.createElement("div"));
@@ -17,7 +16,7 @@ export const useModal = ({fragment}: IModalTemplate): any[] => {
     useEffect(() => {
 
         const handleClick: EventListener = ({target}: Event): void => {
-            if(isModalOpen && modalRef.current && !modalRef.current.contains(target as any)){
+            if (isModalOpen && modalRef.current && !modalRef.current.contains(target as any)) {
                 setModalOpen(false);
             }
         };

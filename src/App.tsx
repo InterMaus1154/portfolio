@@ -45,7 +45,7 @@ const App: FC = () => {
                 </button>
                 {/*Theme switcher button to appear on every page*/}
                 <button title={"Change colour theme"} aria-label={"Change colour theme"}
-                        className={"Fa-wrapper-button Theme-switcher"}>
+                        className={"Fa-wrapper-button Theme-switcher"} onClick={() => setModalOpen(true)}>
                     <FontAwesomeIcon icon={faPaintRoller} className={"Fa-icon"}/>
                 </button>
                 <RoutesComponent/>

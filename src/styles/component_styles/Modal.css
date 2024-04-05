@@ -1,6 +1,6 @@
 
 .Modal-wrapper {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
     position: fixed;
     inset: 0;
     z-index: 999;
