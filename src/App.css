@@ -39,7 +39,7 @@ body{
 }
 
 main{
-    padding: 2.5rem;
+    padding: 2.5rem 2rem;
 }
 
 .App{
@@ -85,8 +85,8 @@ main{
 
 .Open-header-button{
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 5px;
+    top: 5px;
 
 }
 
@@ -103,17 +103,30 @@ main{
     letter-spacing: 2px;
     /*display: inline-block;*/
     border-radius: 8px;
-    color: #F2F1EB;
+    color: var(--third-txt-clr);
     background-color: var(--prim-txt-clr);
     border: 1px solid transparent;
 
     display: flex;
     align-items: center;
-    gap: .25rem;
+    justify-content: center;
+    gap: .4rem;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .Action-button:hover{
     background-color: var(--fa-icon-clr);
     color: var(--prim-txt-clr);
     border-color: var(--prim-txt-clr);
+}
+
+.Theme-switcher{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+}
+
+.Theme-switcher .Fa-icon{
+    color: var(--prim-txt-clr);
 }

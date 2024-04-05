@@ -12,13 +12,14 @@ const Hero: FC = () => {
     return (
         <section className={"Hero--section"}>
             <h1>Hello, my name is Mark</h1>
-            <h2>I like working with <ReactTyped strings={WORDS} typeSpeed={200} loop backSpeed={75} cursorChar={"|"} showCursor/> </h2>
+            <h2>I like working with <br></br> <ReactTyped strings={WORDS} typeSpeed={200} loop backSpeed={75} cursorChar={"|"} showCursor/> </h2>
             <div className="Hero-bottom">
-                <p>Lover of web development and gold winner of the WorldSkills UK 2023
-                    Web Development competition.
+                <p>
+                    <span>Lover of web development and gold winner of the WorldSkills UK 2023
+                        Web Development competition.</span>
                 </p>
                 <div className="Buttons">
-                    <NavLink className={"Action-button"} to={"/about"}>Explore me
+                    <NavLink className={"Action-button"} to={"/about"}>About me
                         <FontAwesomeIcon icon={faUser} />
                     </NavLink>
                     <NavLink className={"Action-button"} to={"/projects"}>Explore my projects

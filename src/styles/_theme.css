@@ -18,6 +18,7 @@
     --body-bg-clr: #EFEFEF;
     --prim-txt-clr: #212121;
     --sec-txt-clr: #A9A9A9;
+    --third-txt-clr: #F2F1EB;
 
     --header-bg-clr: #212121;
     --header-clr: #EFEFEF;
@@ -44,6 +45,8 @@
 
     --fa-icon-clr: #EFEFEF;
     --fa-icon-hover-clr: #F3FDE8;
+
+    --complimentary-clr: #CAEBF2;
 }
 
 #dark{

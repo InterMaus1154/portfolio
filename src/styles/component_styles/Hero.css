@@ -19,7 +19,7 @@
 
 @media (max-width: 768px) {
     .Hero--section h2 {
-        font-size: 2.75em;
+        font-size: 2.75rem;
     }
 
     .Hero--section {
@@ -29,6 +29,10 @@
 
 .Hero--section p {
     font-size: 1.5rem;
+
+}
+
+.Hero--section p span{
     background-color: var(--complimentary-clr);
 }
 
