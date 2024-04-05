@@ -15,7 +15,7 @@ const PROJECTS : IProject[] = [
     {
         projectTitle: "Verina To-do App",
         projectExcerpt: "To-do web application made using React on the frontend, and NodeJS on the backend, communicating through WebSockets",
-        projectImage: "https://placehold.co/600x400",
+        projectImage: "https://i.ibb.co/Dznm67M/verina-logo-2.png",
         projectLink: "https://verinatodoappbeta.onrender.com/",
         projectGithubLink: "https://github.com/InterMaus1154/react-ts-todo"
     },
@@ -29,7 +29,7 @@ const PROJECTS : IProject[] = [
     {
         projectTitle: "KimCorp Power",
         projectExcerpt: "Design implementation of a WorldSkills competition practise task. Made with HTML, CSS and minimal JavaScript",
-        projectImage: "https://placehold.co/600x400",
+        projectImage: "https://i.ibb.co/n7R7c2R/kimcorp-logo.png",
         projectLink: "https://kimcorp-power.onrender.com/",
         projectGithubLink: "https://github.com/InterMaus1154/kimcorp-worldskills"
     },

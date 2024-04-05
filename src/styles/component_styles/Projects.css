@@ -26,8 +26,15 @@
     gap: 1rem;
 }
 
+.Project-box .Project-image{
+
+}
+
 .Project-box .Project-image img{
+    width: 100%;
     border-radius: var(--project-box-border-radius);
+    height: 250px;
+    object-fit: cover;
 }
 
 .Project-body{
@@ -52,6 +59,10 @@
 
 .Project-links a{
     flex-basis: 50%;
+
+    display: flex;
+    align-items: center;
+    gap: .25rem;
 }
 
 /*.Project-box:hover{*/
