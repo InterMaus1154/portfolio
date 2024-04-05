@@ -14,7 +14,7 @@
 }
 
 .Hero--section h2 span {
-    color: var(--fa-icon-clr);
+    color: var(--sec-txt-clr);
 }
 
 @media (max-width: 768px) {
@@ -27,8 +27,9 @@
     }
 }
 
-p {
+.Hero--section p {
     font-size: 1.5rem;
+    background-color: var(--complimentary-clr);
 }
 
 @keyframes fade-up {
@@ -110,7 +111,7 @@ p {
 
 }
 
-.Hero-bottom{
+.Hero-bottom {
     animation: fade-up 1s linear forwards;
     opacity: 0;
     display: flex;
@@ -118,13 +119,13 @@ p {
     gap: .5rem;
 }
 
-.Hero-bottom .Buttons{
+.Hero-bottom .Buttons {
     --hero-button-gap: 1rem;
     display: flex;
     gap: var(--hero-button-gap);
 
 }
 
-.Hero-bottom .Buttons .Action-button{
+.Hero-bottom .Buttons .Action-button {
     flex-basis: calc(50% - var(--hero-button-gap));
 }

@@ -6,6 +6,11 @@ export const ThemeModal = () => {
         <>
             <h1>Change colour mode</h1>
             <i>Coming soon...</i>
+            <div className="Colour-boxes">
+                <div className="Colour-box">
+
+                </div>
+            </div>
         </>
     );
 };

@@ -30,7 +30,7 @@ html, body, #root, .App{
 }
 
 body{
-    --body-width: 1500px;
+    --body-width: 1700px;
 
     max-width: var(--body-width);
     margin: 0 auto;
@@ -39,7 +39,7 @@ body{
 }
 
 main{
-    padding: 2.5rem 0;
+    padding: 2.5rem;
 }
 
 .App{
@@ -50,17 +50,13 @@ main{
     color: var(--prim-txt-clr);
 }
 
-.Page--component{
-    min-height: 65vh;
-    display: grid;
-    place-items: center;
-}
-
 .Section--title{
     --section-title-size: 2rem;
     font-size: var(--section-title-size);
     border-bottom: 1px solid var(--sec-txt-clr);
     padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
 }
 
 .Section--subtitle{
@@ -91,10 +87,11 @@ main{
     position: fixed;
     left: 0;
     top: 0;
+
 }
 
-.Fa-wrapper-button:hover{
-    background-color: var(--fa-icon-hover-bg-clr);
+.Open-header-button .Fa-icon{
+    color: var(--prim-txt-clr);
 }
 
 .Fa-wrapper-button:hover .Fa-icon{
@@ -107,9 +104,16 @@ main{
     /*display: inline-block;*/
     border-radius: 8px;
     color: #F2F1EB;
-    background-color: var(--sec-txt-clr);
+    background-color: var(--prim-txt-clr);
+    border: 1px solid transparent;
+
+    display: flex;
+    align-items: center;
+    gap: .25rem;
 }
 
 .Action-button:hover{
-    background-color: #0D1B2A;
+    background-color: var(--fa-icon-clr);
+    color: var(--prim-txt-clr);
+    border-color: var(--prim-txt-clr);
 }

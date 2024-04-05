@@ -1,5 +1,7 @@
 .Home--section{
-
+    min-height: 65vh;
+    display: grid;
+    place-items: center;
 }
 
 .Home--section::before{

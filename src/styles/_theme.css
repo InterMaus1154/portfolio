@@ -15,18 +15,34 @@
 /*}*/
 
 #light{
-    --body-bg-clr: #A5DD9B;
-    --prim-txt-clr: #030637;
-    --sec-txt-clr: #030637;
+    --body-bg-clr: #EFEFEF;
+    --prim-txt-clr: #212121;
+    --sec-txt-clr: #A9A9A9;
 
-    --header-bg-clr: #E5E483;
-    --header-clr: #212121;
+    --header-bg-clr: #212121;
+    --header-clr: #EFEFEF;
 
-    --button-hover-clr: #ffffff;
-    --button-bg-clr: #88AB8E;
+    --button-hover-clr: #212121;
+    --button-bg-clr: #A9A9A9;
 
-    --fa-icon-clr: #111827;
-    --fa-icon-hover-bg-clr: #111827;
+    --fa-icon-clr: #EFEFEF;
+    --fa-icon-hover-clr: #FF3B3F;
+
+    --complimentary-clr: #CAEBF2;
+}
+
+#clean-light{
+    --body-bg-clr: #EFEFEF;
+    --prim-txt-clr: #212121;
+    --sec-txt-clr: #A9A9A9;
+
+    --header-bg-clr: #212121;
+    --header-clr: #EFEFEF;
+
+    --button-hover-clr: #212121;
+    --button-bg-clr: #A9A9A9;
+
+    --fa-icon-clr: #EFEFEF;
     --fa-icon-hover-clr: #F3FDE8;
 }
 

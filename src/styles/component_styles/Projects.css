@@ -1,10 +1,13 @@
 .Projects--section{
     padding: 2.5rem;
+
+    min-height: 65vh;
+    display: grid;
+    place-items: center;
 }
 
-
 .Projects-container{
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
@@ -15,7 +18,8 @@
     cursor: pointer;
     transition: scale .25s linear, opacity .25s linear;
 
-    background-color: green;
+    background-color: var(--prim-txt-clr);
+    color: var(--sec-txt-clr);
     padding: .5rem;
     --project-box-border-radius: 8px;
     border-top-left-radius: var(--project-box-border-radius);
@@ -60,9 +64,7 @@
 .Project-links a{
     flex-basis: 50%;
 
-    display: flex;
-    align-items: center;
-    gap: .25rem;
+    border: 1px solid var(--sec-txt-clr);
 }
 
 /*.Project-box:hover{*/

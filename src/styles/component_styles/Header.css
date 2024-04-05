@@ -35,6 +35,8 @@ header{
     top: 0;
 }
 
+
+
 .Header-active{
     transform: translateX(0);
     opacity: 1;
