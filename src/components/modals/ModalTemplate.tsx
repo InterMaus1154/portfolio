@@ -33,7 +33,7 @@ export const useModal = ({fragment}: IModalTemplate): any[] => {
             createPortal(
                 isModalOpen && <div className={"Modal-wrapper"}>
                     <div className="Modal" ref={modalRef}>
-                        <button className={"Fa-wrapper-button Close-modal--modal"} onClick={() => setModalOpen(false)}>
+                        <button className={"Fa-wrapper-button Close-modal--modal"} aria-label={"Close theme changer modal"} title={"Close modal"} onClick={() => setModalOpen(false)}>
                             <FontAwesomeIcon icon={faX} className={"Fa-icon"}/>
                         </button>
                         {fragment}

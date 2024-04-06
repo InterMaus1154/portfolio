@@ -9,9 +9,9 @@ export const ThemeModal = () => {
 
     return (
         <>
-            <h1>Change theme</h1>
-            <div className="Colour-boxes">
-                <label className="Colour-box">
+            <h1 role={"heading"}>Change theme</h1>
+            <div className="Colour-boxes" role={"form"}>
+                <label className="Colour-box" >
                     <span className={"Colour-name"}>Clean</span>
                     <input name={"colours"} type="radio" value={"clean"} checked={theme === "clean"}
                            onChange={e => setTheme(e.target.value as any)}/>

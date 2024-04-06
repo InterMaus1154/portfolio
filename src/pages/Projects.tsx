@@ -55,6 +55,7 @@ const Projects: FC = () => {
                             projectImage={project.projectImage}
                             projectLink={project.projectLink}
                             projectGithubLink={project.projectGithubLink}
+                            key={project.projectTitle}
                         />
                     })
                 }
