@@ -120,7 +120,7 @@ const About: FC = () => {
                                 </a>
                             </li>
                             <li>
-                                <a download href="../assets/MarkKissCV_online.pdf" target={"_blank"}
+                                <a download={true} href="../assets/MarkKissCV_online.pdf" target={"_blank"}
                                    title={"View CV PDF"} aria-label={"View CV PDF"}>
                                     <FontAwesomeIcon icon={faFile}/>
                                 </a>
