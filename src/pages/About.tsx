@@ -7,8 +7,22 @@ import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faFile} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import PDF from "../assets/MarkKissCV_online.pdf";
 
 const About: FC = () => {
+
+    const downloadFile = () => {
+        fetch(PDF).then((response) => {
+            response.blob().then((blob) => {
+                const fileURL = window.URL.createObjectURL(blob);
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "MarkKissCV_online.pdf";
+                alink.click();
+            });
+        });
+    };
+
     return (
         <PageTemplate className={"About--section"}>
             <h1 className="Section--title">&#60;about&#62;</h1>
@@ -65,16 +79,19 @@ const About: FC = () => {
                 <h2>Achievements</h2>
                 <div className="Introduction-box-body">
                     <div className="Introduction-text">
-                        <p>In 2023, encouraged by my teacher, I applied for the <span className={"Highlighted-word"} id={"H1"}>WorldSkills Web Development</span> competition.
+                        <p>In 2023, encouraged by my teacher, I applied for the <span className={"Highlighted-word"}
+                                                                                      id={"H1"}>WorldSkills Web Development</span> competition.
                         </p>
                         <p>After 2 regional rounds, I was <span
-                            className={"Highlighted-word"} id={"H2"}>one of the 8</span> selected competitors out of 100+, who
+                            className={"Highlighted-word"} id={"H2"}>one of the 8</span> selected competitors out of
+                            100+, who
                             could participate in the national final.
                         </p>
                         <p>The national final consisted of different modules, namely as <span
                             className={"Highlighted-word"} id={"H3"}>design, frontend and backend</span> development.
                         </p>
-                        <p>After successfully completing each task, I managed to <span className={"Highlighted-word"} id={"H4"}> win the gold medal</span> and
+                        <p>After successfully completing each task, I managed to <span className={"Highlighted-word"}
+                                                                                       id={"H4"}> win the gold medal</span> and
                             be part of squad UK, with a chance to participate in the international competition in Lyon
                             2024
                         </p>
@@ -120,8 +137,8 @@ const About: FC = () => {
                                 </a>
                             </li>
                             <li>
-                                <a download={true} href="../assets/MarkKissCV_online.pdf" target={"_blank"}
-                                   title={"View CV PDF"} aria-label={"View CV PDF"}>
+                                <a className={"Fa-wrapper-button"}
+                                   title={"View CV PDF"} aria-label={"View CV PDF"} onClick={downloadFile}>
                                     <FontAwesomeIcon icon={faFile}/>
                                 </a>
                             </li>
