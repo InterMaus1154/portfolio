@@ -1,6 +1,6 @@
 
 .Modal-wrapper {
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(0, 0, 0, .7);
     position: fixed;
     inset: 0;
     z-index: 999;
@@ -19,6 +19,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--body-bg-clr);
+    color: var(--prim-txt-clr);
 }
 
 .Close-modal--modal {
@@ -27,6 +29,128 @@
     top: 0;
 }
 
+.Close-modal--modal .Fa-icon{
+    color: var(--prim-txt-clr);
+}
+
 .Modal h1{
     text-align: center;
+}
+
+.Colour-boxes{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Colour-box{
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Colour-box:has(:not(input[type="radio"]:checked)):hover{
+    border: 2px solid var(--sec-txt-clr);
+}
+
+.Colour-box input{
+    display: none;
+}
+
+.Colour-name{
+    font-weight: bold;
+    text-align: center;
+}
+
+.Colour-box:has(input[type="radio"]:checked):hover{
+    background-color: var(--sec-txt-clr);
+    color: var(--third-txt-clr);
+}
+
+.Colour-box:has(input[type="radio"]:checked){
+    border-color: var(--sec-txt-clr);
+}
+
+/*COLOUR SCHEME - COLOUR BOXES*/
+
+.Colours{
+    display: flex;
+    border: 1px solid var(--prim-txt-clr);
+}
+
+.Colours .Colour{
+    width: 15px;
+    height: 50px;
+}
+
+/*COLOUR SCHEME CLEAN*/
+
+.Colours.Colour-scheme-clean .Colour:nth-child(1){
+    background-color: #EFEFEF;
+}
+
+.Colours.Colour-scheme-clean .Colour:nth-child(2){
+    background-color: #212121;
+}
+
+.Colours.Colour-scheme-clean .Colour:nth-child(3){
+    background-color: #A9A9A9;
+}
+
+.Colours.Colour-scheme-clean .Colour:nth-child(4){
+    background-color: #F2F1EB;
+}
+
+.Colours.Colour-scheme-clean .Colour:nth-child(5){
+    background-color: #CAEBF2;
+}
+
+/*COLOUR SCHEME WARM*/
+.Colours.Colour-scheme-warm .Colour:nth-child(1){
+    background-color: #D7CEC7;
+}
+
+.Colours.Colour-scheme-warm .Colour:nth-child(2){
+    background-color: #565656;
+}
+
+.Colours.Colour-scheme-warm .Colour:nth-child(3){
+    background-color: #76323F;
+}
+
+.Colours.Colour-scheme-warm .Colour:nth-child(4){
+    background-color: #C09F80;
+}
+
+.Colours.Colour-scheme-warm .Colour:nth-child(5){
+    background-color: #F2F1EB;
+}
+
+
+/*COLOUR SCHEME MODERN*/
+.Colours.Colour-scheme-modern .Colour:nth-child(1){
+    background-color: #C5C1C0;
+}
+
+.Colours.Colour-scheme-modern .Colour:nth-child(2){
+    background-color: #0A1612;
+}
+
+.Colours.Colour-scheme-modern .Colour:nth-child(3){
+    background-color: #1A2930;
+}
+
+.Colours.Colour-scheme-modern .Colour:nth-child(4){
+    background-color: #F4DECB;
+}
+
+.Colours.Colour-scheme-modern .Colour:nth-child(5){
+    background-color: #F7CE3E;
 }

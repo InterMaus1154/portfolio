@@ -89,7 +89,6 @@ main{
     top: 5px;
 
 }
-
 .Open-header-button .Fa-icon{
     color: var(--prim-txt-clr);
 }
@@ -129,4 +128,19 @@ main{
 
 .Theme-switcher .Fa-icon{
     color: var(--prim-txt-clr);
+}
+
+/*floating buttons change background on scroll*/
+
+.Scrollable-button{
+    animation: scrollableButton linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100vh;
+    animation-range-end: 105vh;
+}
+
+@keyframes scrollableButton{
+    100%{
+        background-color: rgba(255, 255, 255, .7);
+    }
 }

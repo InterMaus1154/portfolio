@@ -19,7 +19,7 @@ const Hero: FC = () => {
                         Web Development competition.</span>
                 </p>
                 <div className="Buttons">
-                    <NavLink className={"Action-button"} to={"/about"}>About me
+                    <NavLink className={"Action-button"} to={"/about"}>More about me
                         <FontAwesomeIcon icon={faUser} />
                     </NavLink>
                     <NavLink className={"Action-button"} to={"/projects"}>Explore my projects

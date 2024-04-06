@@ -39,13 +39,13 @@ const App: FC = () => {
             <Header></Header>
             <main>
                 {/*Menu icon to appear on every page*/}
-                <button className={"Open-header-button Fa-wrapper-button"} title={"Open menu"} aria-label={"Open menu"}
+                <button className={"Open-header-button Fa-wrapper-button Scrollable-button"} title={"Open menu"} aria-label={"Open menu"}
                         onClick={openMenu}>
                     <FontAwesomeIcon icon={faBars} className={"Fa-icon"}/>
                 </button>
                 {/*Theme switcher button to appear on every page*/}
                 <button title={"Change colour theme"} aria-label={"Change colour theme"}
-                        className={"Fa-wrapper-button Theme-switcher"} onClick={() => setModalOpen(true)}>
+                        className={"Fa-wrapper-button Theme-switcher Scrollable-button"} onClick={() => setModalOpen(true)}>
                     <FontAwesomeIcon icon={faPaintRoller} className={"Fa-icon"}/>
                 </button>
                 <RoutesComponent/>

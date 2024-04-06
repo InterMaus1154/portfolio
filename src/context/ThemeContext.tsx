@@ -1,6 +1,6 @@
 import React, {FC, createContext, useState, ReactNode} from 'react';
 
-export type Themes = "dark" | "light";
+export type Themes = "clean" | "warm" | "modern" | "dark";
 
 interface IThemeContext {
     theme: Themes;
@@ -13,7 +13,7 @@ interface IThemeProvider {
 }
 const ThemeProvider : FC<IThemeProvider> = ({children}) =>{
 
-    const [theme, setTheme] = useState<Themes>("light");
+    const [theme, setTheme] = useState<Themes>("clean");
 
     return(
         <ThemeContext.Provider value={{theme: theme, setTheme: setTheme}}>

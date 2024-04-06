@@ -1,13 +1,19 @@
 @import "~@flaticon/flaticon-uicons/css/brands/all";
 
 .Introduction-box {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     line-height: 1.5;
 }
 
+.Introduction-box:first-of-type{
+    margin-top: 3rem;
+}
+
+
+
 .Introduction-box-body {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
     align-items: center;
     justify-items: center;
     gap: 1.5rem;
@@ -34,35 +40,130 @@
 }
 
 .Introduction-box p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    margin: 1rem 0;
 }
 
-.Skill-list {
+.Introduction-text{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.Icon-list {
     list-style-type: none;
-    font-size: 3rem;
+    font-size: 5rem;
     color: var(--prim-txt-clr);
 
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.Skill-list li:hover{
+.Icon-list li:hover{
     color: var(--sec-txt-clr);
 }
 
-.Skill-list li.Has-svg{
+.Icon-list li.Has-svg{
     width: 3rem;
 }
 
-.Skill-list li.Has-svg:hover svg{
+.Icon-list li.Has-svg:hover svg{
     color: var(--sec-txt-clr);
 }
 
-.Skill-list li.Has-svg svg{
+.Icon-list li.Has-svg svg{
     color: var(--body-bg-clr);
     fill: currentColor;
 }
 
+@media(max-width: 768px){
+    .Icon-list{
+        font-size: 3rem;
+    }
+}
+
+.Highlighted-word {
+    position: relative;
+    isolation: isolate;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.Highlighted-word::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 0;
+    transition: width 1s ease-in-out;
+    background: transparent;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    z-index: -1;
+    isolation: isolate;
+
+    animation-name: highlight;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+    --animation-base-delay: 1s;
+}
+
+#H1::before{
+    background-image: linear-gradient(
+            to right,
+            rgba(var(--highlighter-clr-1), .1),
+            rgba(var(--highlighter-clr-1), 1) 4%,
+            rgba(var(--highlighter-clr-1), .4)
+    );
+    rotate: 2.5deg;
+    --final-span-width: 102%;
+    animation-delay: calc(var(--animation-base-delay) * 1);
+}
+
+#H2::before{
+    background-image: linear-gradient(
+            to right,
+            rgba(var(--highlighter-clr-2), .1),
+            rgba(var(--highlighter-clr-2), .5) 4%,
+            rgba(var(--highlighter-clr-2), .4)
+    );
+    rotate: -2.5deg;
+    --final-span-width: 98.5%;
+    animation-delay: calc(var(--animation-base-delay) * 2);
+}
+
+#H3::before{
+    background-image: linear-gradient(
+            to right,
+            rgba(var(--highlighter-clr-3), .1),
+            rgba(var(--highlighter-clr-3), .6) 4%,
+            rgba(var(--highlighter-clr-3), .4)
+    );
+    rotate: -1deg;
+    --final-span-width: 100%;
+    animation-delay: calc(var(--animation-base-delay) * 3);
+}
+
+#H4::before{
+    background-image: linear-gradient(
+            to right,
+            rgba(var(--highlighter-clr-4), .1),
+            rgba(var(--highlighter-clr-4), .8) 4%,
+            rgba(var(--highlighter-clr-4), .4)
+    );
+    rotate: -3deg;
+    --final-span-width: 103%;
+    animation-delay: calc(var(--animation-base-delay) * 4);
+}
+
+
+@keyframes highlight {
+    to {
+        width: var(--final-span-width);
+    }
+}

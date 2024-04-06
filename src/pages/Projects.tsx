@@ -45,7 +45,7 @@ const PROJECTS : IProject[] = [
 const Projects: FC = () => {
     return (
         <PageTemplate className={"Projects--section"}>
-            <h1 className={"Section--title"}>Projects</h1>
+            <h1 className={"Section--title"}>&#60;projects&#62;</h1>
             <div className="Projects-container">
                 {
                     PROJECTS.map((project, idx) => {

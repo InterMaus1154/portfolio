@@ -14,7 +14,76 @@
 /*    --button-bg-clr: #B2B377;*/
 /*}*/
 
-#light{
+/*#light {*/
+/*    --body-bg-clr: #C5C1C0;*/
+/*    --prim-txt-clr: #0A1612;*/
+/*    --sec-txt-clr: #1A2930;*/
+/*    --third-txt-clr: #F4DECB;*/
+
+/*    --header-bg-clr: #F7CE3E;*/
+/*    --header-clr: #212121;*/
+
+/*    --button-hover-clr: #0E0B16;*/
+/*    --button-bg-clr: #F2F1EB;*/
+
+/*    --fa-icon-clr: #6B7A8F;*/
+/*    --fa-icon-hover-clr: #FF3B3F;*/
+
+/*    --complimentary-clr: #F2F1EB;*/
+
+/*    --highlighter-clr-1: 0, 205, 255;*/
+/*    --highlighter-clr-2: 255, 59, 63;*/
+/*    --highlighter-clr-3: 140, 255, 50;*/
+/*    --highlighter-clr-4: 253, 255, 50;*/
+/*}*/
+
+#modern {
+    --body-bg-clr: #C5C1C0;
+    --prim-txt-clr: #0A1612;
+    --sec-txt-clr: #1A2930;
+    --third-txt-clr: #F4DECB;
+
+    --header-bg-clr: #F7CE3E;
+    --header-clr: #212121;
+
+    --button-hover-clr: #0E0B16;
+    --button-bg-clr: #F2F1EB;
+
+    --fa-icon-clr: #f5f5f5;
+    --fa-icon-hover-clr: #FF3B3F;
+
+    --complimentary-clr: #F2F1EB;
+
+    --highlighter-clr-1: 0, 205, 255;
+    --highlighter-clr-2: 255, 59, 63;
+    --highlighter-clr-3: 140, 255, 50;
+    --highlighter-clr-4: 253, 255, 50;
+}
+
+#warm {
+    --body-bg-clr: #D7CEC7;
+    --prim-txt-clr: #565656;
+    --sec-txt-clr: #76323F;
+    --third-txt-clr: #C09F80;
+
+    --header-bg-clr: #262228;
+    --header-clr: #F2F1EB;
+
+    --button-hover-clr: #0E0B16;
+    --button-bg-clr: #F2F1EB;
+
+    --fa-icon-clr: #E9C893;
+    --fa-icon-hover-clr: #FF3B3F;
+
+    --complimentary-clr: #F2F1EB;
+
+    --highlighter-clr-1: 0, 205, 255;
+    --highlighter-clr-2: 255, 59, 63;
+    --highlighter-clr-3: 140, 255, 50;
+    --highlighter-clr-4: 253, 255, 50;
+}
+
+#clean {
     --body-bg-clr: #EFEFEF;
     --prim-txt-clr: #212121;
     --sec-txt-clr: #A9A9A9;
@@ -30,26 +99,14 @@
     --fa-icon-hover-clr: #FF3B3F;
 
     --complimentary-clr: #CAEBF2;
+
+    --highlighter-clr-1: 202, 235, 242;
+    --highlighter-clr-2: 255, 59, 63;
+    --highlighter-clr-3: 140, 255, 50;
+    --highlighter-clr-4: 253, 255, 50;
 }
 
-#clean-light{
-    --body-bg-clr: #EFEFEF;
-    --prim-txt-clr: #212121;
-    --sec-txt-clr: #A9A9A9;
-
-    --header-bg-clr: #212121;
-    --header-clr: #EFEFEF;
-
-    --button-hover-clr: #212121;
-    --button-bg-clr: #A9A9A9;
-
-    --fa-icon-clr: #EFEFEF;
-    --fa-icon-hover-clr: #F3FDE8;
-
-    --complimentary-clr: #CAEBF2;
-}
-
-#dark{
+#dark {
     --body-bg-clr: #0D1B2A;
     --prim-txt-clr: #388E3C;
     --sec-txt-clr: #FFA726;
