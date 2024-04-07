@@ -1,4 +1,4 @@
-import React, {FC, createContext, useState, ReactNode} from 'react';
+import React, {FC, createContext, useState, ReactNode, useEffect} from 'react';
 
 export type Themes = "clean" | "warm" | "modern" | "dark";
 
@@ -13,7 +13,15 @@ interface IThemeProvider {
 }
 const ThemeProvider : FC<IThemeProvider> = ({children}) =>{
 
-    const [theme, setTheme] = useState<Themes>("clean");
+
+    const [theme, setTheme] = useState<Themes>(window.localStorage.getItem("mk-pf-theme") ? window.localStorage.getItem("mk-pf-theme") as Themes : "clean");
+
+    // save to local storage on change
+    useEffect(() => {
+
+        window.localStorage.setItem("mk-pf-theme", theme);
+
+    }, [theme]);
 
     return(
         <ThemeContext.Provider value={{theme: theme, setTheme: setTheme}}>
