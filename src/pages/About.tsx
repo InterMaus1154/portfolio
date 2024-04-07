@@ -79,11 +79,11 @@ const About: FC = () => {
                 <h2>Achievements</h2>
                 <div className="Introduction-box-body">
                     <div className="Introduction-text">
-                        <p>In 2023, encouraged by my teacher, I applied for the <span className={"Highlighted-word"}
+                        <p>In 2023, my teacher encouraged me to apply for the <span className={"Highlighted-word"}
                                                                                       id={"H1"}>WorldSkills Web Development</span> competition.
                         </p>
-                        <p>After 2 regional rounds, I was <span
-                            className={"Highlighted-word"} id={"H2"}>one of the 8</span> selected competitors out of
+                        <p>After two regional rounds, I was <span
+                            className={"Highlighted-word"} id={"H2"}>among the eight</span> selected competitors out of
                             100+, who
                             could participate in the national final.
                         </p>
@@ -137,10 +137,10 @@ const About: FC = () => {
                                 </a>
                             </li>
                             <li>
-                                <a className={"Fa-wrapper-button"}
+                                <button className={"Download-button"}
                                    title={"View CV PDF"} aria-label={"View CV PDF"} onClick={downloadFile}>
                                     <FontAwesomeIcon icon={faFile}/>
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>

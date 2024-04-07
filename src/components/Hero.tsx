@@ -11,7 +11,7 @@ const Hero: FC = () => {
 
     return (
         <section className={"Hero--section"}>
-            <h1>Hello, my name is Mark</h1>
+            <h1>Hello, my name is Mark Kiss</h1>
             <h2>I like working with <br></br> <ReactTyped strings={WORDS} typeSpeed={200} loop backSpeed={75} cursorChar={"|"} showCursor/> </h2>
             <div className="Hero-bottom">
                 <p>

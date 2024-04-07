@@ -14,8 +14,8 @@ interface IProject{
 const PROJECTS : IProject[] = [
     {
         projectTitle: "Verina To-do App",
-        projectExcerpt: "To-do web application made using React on the frontend, and NodeJS on the backend, communicating through WebSockets",
-        projectImage: "https://i.ibb.co/Dznm67M/verina-logo-2.png",
+        projectExcerpt: "To-do web application, with React on the frontend, Express on the backend, all connected via websockets.",
+        projectImage: "https://i.ibb.co/sFmspFs/todo-logo.png",
         projectLink: "https://verinatodoappbeta.onrender.com/",
         projectGithubLink: "https://github.com/InterMaus1154/react-ts-todo"
     },
