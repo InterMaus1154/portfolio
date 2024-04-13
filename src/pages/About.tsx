@@ -7,7 +7,7 @@ import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faFile} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import PDF from "../assets/MarkKissCV_online.pdf";
+import PDF from "../assets/MarkKissCV.pdf";
 
 const About: FC = () => {
 
