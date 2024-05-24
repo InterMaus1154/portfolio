@@ -1,27 +1,27 @@
 import {FC} from 'react';
 import PageTemplate from "./PageTemplate";
 import "../styles/component_styles/About.css";
-import {faHtml5, faCss3, faJs, faReact, faPhp, faGithub, faGit} from "@fortawesome/free-brands-svg-icons";
+import {faHtml5, faCss3, faJs, faReact, faPhp, faGithub, faGit, faLaravel} from "@fortawesome/free-brands-svg-icons";
 import {faDatabase} from "@fortawesome/free-solid-svg-icons";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import {faFile} from "@fortawesome/free-solid-svg-icons";
+import {faFilePdf as faFile} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import PDF from "../assets/MarkKissCV.pdf";
 
 const About: FC = () => {
 
-    const downloadFile = () => {
-        fetch(PDF).then((response) => {
-            response.blob().then((blob) => {
-                const fileURL = window.URL.createObjectURL(blob);
-                let alink = document.createElement("a");
-                alink.href = fileURL;
-                alink.download = "MarkKissCV_online.pdf";
-                alink.click();
-            });
-        });
-    };
+    // const downloadFile = () => {
+    //     fetch(PDF).then((response) => {
+    //         response.blob().then((blob) => {
+    //             const fileURL = window.URL.createObjectURL(blob);
+    //             let alink = document.createElement("a");
+    //             alink.href = fileURL;
+    //             alink.download = "MarkKissCV_online.pdf";
+    //             alink.click();
+    //         });
+    //     });
+    // };
 
     return (
         <PageTemplate className={"About--section"}>
@@ -49,6 +49,9 @@ const About: FC = () => {
                             </li>
                             <li title={"PHP"} aria-label={"PHP"}>
                                 <FontAwesomeIcon icon={faPhp}/>
+                            </li>
+                            <li title={"Laravel"} aria-label={"Laravel"}>
+                                <FontAwesomeIcon icon={faLaravel}/>
                             </li>
                             <li title={"MySQL"} aria-label={"MySQL"}>
                                 <FontAwesomeIcon icon={faDatabase}/>
@@ -91,10 +94,10 @@ const About: FC = () => {
                             className={"Highlighted-word"} id={"H3"}>design, frontend and backend</span> development.
                         </p>
                         <p>After successfully completing each task, I managed to <span className={"Highlighted-word"}
-                                                                                       id={"H4"}> win the gold medal</span> and
-                            be part of squad UK, with a chance to participate in the international competition in Lyon
+                                                                                       id={"H4"}> win the gold medal</span>.
                             2024
                         </p>
+                        <p>I am the official <span className={"Highlighted-word"} id="H5">Team UK competitor</span> for WoldSkills Lyon International 2024, in Web Technologies category.</p>
                     </div>
                     <figure>
                         <img src="https://i.ibb.co/QYP2y0w/me.jpg" alt="Mark Kiss"/>
@@ -109,8 +112,7 @@ const About: FC = () => {
                         <p>I am currently a college student in London, finishing my BTEC Level 3 Extended Diploma in IT
                             with 13 units.
                         </p>
-                        <p>I am expected to finish this qualification with the highest possible grade, which is <span
-                            className={"Highlighted-word"} id={"H5"}>D*D*D*</span></p>
+                        <p>I am expected to finish this qualification with the highest possible grade, which is <strong>D*D*D*</strong></p>
                     </div>
                 </div>
             </div>
@@ -137,10 +139,9 @@ const About: FC = () => {
                                 </a>
                             </li>
                             <li>
-                                <button className={"Download-button"}
-                                   title={"View CV PDF"} aria-label={"View CV PDF"} onClick={downloadFile}>
-                                    <FontAwesomeIcon icon={faFile}/>
-                                </button>
+                                <a href={PDF} aria-label={"Download CV in PDF format"} title={"Download CV in PDF"} target={"_blank"}>
+                                    <FontAwesomeIcon icon={faFile} />
+                                </a>
                             </li>
                         </ul>
                     </div>

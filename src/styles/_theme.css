@@ -58,6 +58,7 @@
     --highlighter-clr-2: 255, 59, 63;
     --highlighter-clr-3: 140, 255, 50;
     --highlighter-clr-4: 253, 255, 50;
+    --highlighter-clr-5: 195, 187, 236;
 }
 
 #warm {
@@ -81,6 +82,7 @@
     --highlighter-clr-2: 255, 59, 63;
     --highlighter-clr-3: 140, 255, 50;
     --highlighter-clr-4: 253, 255, 50;
+    --highlighter-clr-5: 195, 187, 236;
 }
 
 #clean {
@@ -104,6 +106,7 @@
     --highlighter-clr-2: 255, 59, 63;
     --highlighter-clr-3: 140, 255, 50;
     --highlighter-clr-4: 253, 255, 50;
+    --highlighter-clr-5: 195, 187, 236;
 }
 
 #dark {

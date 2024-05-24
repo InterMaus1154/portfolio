@@ -5,10 +5,9 @@
     line-height: 1.5;
 }
 
-.Introduction-box:first-of-type{
+.Introduction-box:first-of-type {
     margin-top: 3rem;
 }
-
 
 
 .Introduction-box-body {
@@ -44,7 +43,7 @@
     margin: 1rem 0;
 }
 
-.Introduction-text{
+.Introduction-text {
     padding: 1rem 0;
     text-align: center;
 }
@@ -61,25 +60,25 @@
     align-items: center;
 }
 
-.Icon-list li:hover{
+.Icon-list li:hover {
     color: var(--sec-txt-clr);
 }
 
-.Icon-list li.Has-svg{
+.Icon-list li.Has-svg {
     width: 3rem;
 }
 
-.Icon-list li.Has-svg:hover svg{
+.Icon-list li.Has-svg:hover svg {
     color: var(--sec-txt-clr);
 }
 
-.Icon-list li.Has-svg svg{
+.Icon-list li.Has-svg svg {
     color: var(--body-bg-clr);
     fill: currentColor;
 }
 
-@media(max-width: 768px){
-    .Icon-list{
+@media (max-width: 768px) {
+    .Icon-list {
         font-size: 3rem;
     }
 }
@@ -113,7 +112,7 @@
     --animation-base-delay: 1s;
 }
 
-#H1::before{
+#H1::before {
     background-image: linear-gradient(
             to right,
             rgba(var(--highlighter-clr-1), .1),
@@ -125,7 +124,7 @@
     animation-delay: calc(var(--animation-base-delay) * 1);
 }
 
-#H2::before{
+#H2::before {
     background-image: linear-gradient(
             to right,
             rgba(var(--highlighter-clr-2), .1),
@@ -137,7 +136,7 @@
     animation-delay: calc(var(--animation-base-delay) * 2);
 }
 
-#H3::before{
+#H3::before {
     background-image: linear-gradient(
             to right,
             rgba(var(--highlighter-clr-3), .1),
@@ -149,7 +148,7 @@
     animation-delay: calc(var(--animation-base-delay) * 3);
 }
 
-#H4::before{
+#H4::before {
     background-image: linear-gradient(
             to right,
             rgba(var(--highlighter-clr-4), .1),
@@ -161,6 +160,18 @@
     animation-delay: calc(var(--animation-base-delay) * 4);
 }
 
+#H5::before {
+    background-image: linear-gradient(
+            to right,
+            rgba(var(--highlighter-clr-5), .1),
+            rgba(var(--highlighter-clr-5), .8) 4%,
+            rgba(var(--highlighter-clr-5), .4)
+    );
+    rotate: 2.25deg;
+    --final-span-width: 104%;
+    animation-delay: calc(var(--animation-base-delay) * 5);
+}
+
 
 @keyframes highlight {
     to {
@@ -168,7 +179,7 @@
     }
 }
 
-.Download-button{
+.Download-button {
     font-size: 5rem;
     border: none;
     background: none;
@@ -176,6 +187,6 @@
     color: var(--prim-txt-clr);
 }
 
-.Download-button:hover{
+.Download-button:hover {
     color: var(--sec-txt-clr);
 }
