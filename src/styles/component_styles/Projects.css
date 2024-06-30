@@ -14,7 +14,6 @@
 
 .Project-box{
     /*border: 1px solid red;*/
-    cursor: pointer;
     transition: scale .25s linear, opacity .25s linear;
 
     background-color: var(--prim-txt-clr);
@@ -40,6 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    flex: 1;
 }
 
 .Project-title{
@@ -52,6 +52,8 @@
 }
 
 .Project-links{
+    margin-top: auto;
+
     display: flex;
     gap: 1rem;
 }

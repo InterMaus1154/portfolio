@@ -76,7 +76,6 @@ const About: FC = () => {
                         </ul>
                     </div>
                 </div>
-
             </div>
             <div className="Introduction-box">
                 <h2>Achievements</h2>
@@ -139,7 +138,7 @@ const About: FC = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href={PDF} aria-label={"Download CV in PDF format"} title={"Download CV in PDF"} target={"_blank"}>
+                                <a href={PDF} aria-label={"Download CV in PDF format"} rel={"noreferrer"} title={"Download CV in PDF"} target={"_blank"}>
                                     <FontAwesomeIcon icon={faFile} />
                                 </a>
                             </li>
