@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useMemo} from 'react';
 import PageTemplate from "./PageTemplate";
 import "../styles/component_styles/Projects.css";
 import ProjectBox from "../components/ProjectBox";
@@ -50,12 +50,15 @@ const PROJECTS : IProject[] = [
 ];
 
 const Projects: FC = () => {
+
+    const projects = useMemo(()=> PROJECTS, [PROJECTS]);
+
     return (
         <PageTemplate className={"Projects--section"}>
             <h1 className={"Section--title"}>&#60;projects&#62;</h1>
             <div className="Projects-container">
                 {
-                    PROJECTS.map((project, idx) => {
+                    projects.map((project, idx) => {
                         return <ProjectBox
                             projectTitle={project.projectTitle}
                             projectExcerpt={project.projectExcerpt}
