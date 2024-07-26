@@ -27,6 +27,84 @@ const About: FC = () => {
         <PageTemplate className={"About--section"}>
             <h1 className="Section--title">&#60;about&#62;</h1>
             <div className="Introduction-box">
+                <h2>Social</h2>
+                <div className="Introduction-box-body">
+                    <div className="Introduction-text">
+                        <ul className="Social-list Icon-list">
+                            <li>
+                                <a href="mailto: amarco1154@gmail.com" aria-label={"Send Email"} title={"Send email"}>
+                                    <FontAwesomeIcon icon={faEnvelope}/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/intermaus1154" target={"_blank"} rel="noreferrer"
+                                   aria-label={"Open Github page"} title={"Open Github page"}>
+                                    <FontAwesomeIcon icon={faGithub}/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={"https://www.linkedin.com/in/márk-kiss-2860b822b"} target={"_blank"}
+                                   rel={"noreferrer"} aria-label={"Open LinkedIn page"} title={"Open Linkedin page"}>
+                                    <FontAwesomeIcon icon={faLinkedin}/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={PDF} aria-label={"Download CV in PDF format"} rel={"noreferrer"}
+                                   title={"Download CV in PDF"} target={"_blank"}>
+                                    <FontAwesomeIcon icon={faFile}/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="Introduction-box">
+                <h2>Achievements</h2>
+                <div className="Introduction-box-body">
+                    <div className="Introduction-text">
+                        <p>In 2023, my teacher encouraged me to apply for the <span className={"Highlighted-word"}
+                                                                                    id={"H1"}>WorldSkills Web Development</span> competition.
+                        </p>
+                        <p>After two regional rounds, I was <span
+                            className={"Highlighted-word"} id={"H2"}>among the eight</span> selected competitors out of
+                            100+, who
+                            could participate in the national final.
+                        </p>
+                        <p>The national final consisted of different modules, namely as <span
+                            className={"Highlighted-word"} id={"H3"}>design, frontend and backend</span> development.
+                        </p>
+                        <p>After successfully completing each task, I managed to <span className={"Highlighted-word"}
+                                                                                       id={"H4"}> win the gold medal</span>.
+                            2024
+                        </p>
+                        <p>I am the official <span className={"Highlighted-word"} id="H5">Team UK competitor</span> for
+                            WoldSkills Lyon International 2024, in Web Technologies category.
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="me_ws.jpg" alt="Mark Kiss after winning gold medal in WorldSkills"/>
+                        <figcaption>WorldSkills UK 2023: Web Development</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div className="Introduction-box">
+                <h2>Education</h2>
+                <div className="Introduction-box-body">
+                    <div className="Introduction-text">
+                        <p>I finished high school in College of North West London
+                        </p>
+                        <p>I achieved <strong>D*D*D*</strong> in a BTEC Level 3 Extended Diploma in IT course</p>
+                        <p>Beside that, I have both GCSE English Language and Mathematics.</p>
+                        <p>I was awarded the <strong><em>Outstanding Student of the Year 2024</em></strong> award.</p>
+                    </div>
+                    <figure>
+                        <img src={"me_award.jpg"}
+                             alt={"Mark Kiss receiving his outstanding student of the year award"}/>
+                        <figcaption>Receiving Outstanding Student of the Year 2024 award</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div className="Introduction-box">
                 <h2>Technical Skills</h2>
                 <div className="Introduction-box-body">
                     <div className="Introduction-text">
@@ -72,75 +150,6 @@ const About: FC = () => {
                             </li>
                             <li title={"Github"} aria-label={"Github"}>
                                 <FontAwesomeIcon icon={faGithub}/>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className="Introduction-box">
-                <h2>Achievements</h2>
-                <div className="Introduction-box-body">
-                    <div className="Introduction-text">
-                        <p>In 2023, my teacher encouraged me to apply for the <span className={"Highlighted-word"}
-                                                                                      id={"H1"}>WorldSkills Web Development</span> competition.
-                        </p>
-                        <p>After two regional rounds, I was <span
-                            className={"Highlighted-word"} id={"H2"}>among the eight</span> selected competitors out of
-                            100+, who
-                            could participate in the national final.
-                        </p>
-                        <p>The national final consisted of different modules, namely as <span
-                            className={"Highlighted-word"} id={"H3"}>design, frontend and backend</span> development.
-                        </p>
-                        <p>After successfully completing each task, I managed to <span className={"Highlighted-word"}
-                                                                                       id={"H4"}> win the gold medal</span>.
-                            2024
-                        </p>
-                        <p>I am the official <span className={"Highlighted-word"} id="H5">Team UK competitor</span> for WoldSkills Lyon International 2024, in Web Technologies category.</p>
-                    </div>
-                    <figure>
-                        <img src="https://i.ibb.co/QYP2y0w/me.jpg" alt="Mark Kiss"/>
-                        <figcaption>WorldSkills UK 2023: Web Development</figcaption>
-                    </figure>
-                </div>
-            </div>
-            <div className="Introduction-box">
-                <h2>Education</h2>
-                <div className="Introduction-box-body">
-                    <div className="Introduction-text">
-                        <p>I am currently a college student in London, finishing my BTEC Level 3 Extended Diploma in IT
-                            with 13 units.
-                        </p>
-                        <p>I am expected to finish this qualification with the highest possible grade, which is <strong>D*D*D*</strong></p>
-                    </div>
-                </div>
-            </div>
-            <div className="Introduction-box">
-                <h2>Social</h2>
-                <div className="Introduction-box-body">
-                    <div className="Introduction-text">
-                        <ul className="Social-list Icon-list">
-                            <li>
-                                <a href="mailto: amarco1154@gmail.com" aria-label={"Send Email"} title={"Send email"}>
-                                    <FontAwesomeIcon icon={faEnvelope}/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/intermaus1154" target={"_blank"} rel="noreferrer"
-                                   aria-label={"Open Github page"} title={"Open Github page"}>
-                                    <FontAwesomeIcon icon={faGithub}/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href={"https://www.linkedin.com/in/márk-kiss-2860b822b"} target={"_blank"}
-                                   rel={"noreferrer"} aria-label={"Open LinkedIn page"} title={"Open Linkedin page"}>
-                                    <FontAwesomeIcon icon={faLinkedin}/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href={PDF} aria-label={"Download CV in PDF format"} rel={"noreferrer"} title={"Download CV in PDF"} target={"_blank"}>
-                                    <FontAwesomeIcon icon={faFile} />
-                                </a>
                             </li>
                         </ul>
                     </div>
